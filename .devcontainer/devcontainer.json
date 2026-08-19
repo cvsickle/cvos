@@ -1,0 +1,45 @@
+{
+    "name": "cvOs-build-tools",
+    "runArgs": [
+        "--name=cvOs-build-tools"
+    ],
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+    "mounts": [
+        {
+            "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
+            "target": "/home/vscode/.ssh",
+            "type": "bind"
+        },
+        {
+            "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig",
+            "target": "/home/vscode/.gitconfig",
+            "type": "bind"
+        }
+    ],
+    "onCreateCommand": "bash .devcontainer/post-create.sh",
+    "remoteUser": "vscode",
+    "privileged": true,
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "upgradePackages": true
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:4": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "timonwong.shellcheck",
+                "github.vscode-github-actions",
+                "redhat.vscode-yaml",
+                "nefrob.vscode-just-syntax",
+                "DavidAnson.vscode-markdownlint"
+            ],
+            "settings": {
+                "shellcheck.enable": true,
+                "editor.formatOnSave": true
+            }
+        }
+    }
+}
