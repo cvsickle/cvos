@@ -8,9 +8,11 @@ on:
       - main
     paths-ignore:
       - "**.md"
+      - ".devcontainer/**"
   pull_request:
     paths-ignore:
       - "**.md"
+      - ".devcontainer/**"
   workflow_dispatch: # allow manually triggering builds
 concurrency:
   # only run one build at a time
