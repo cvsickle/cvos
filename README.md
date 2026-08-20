@@ -12,18 +12,25 @@ Based on the [Bluebuild Template](https://github.com/blue-build/template).
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
+
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/cvsickle/cvos:latest
   ```
+
 - Reboot to complete the rebase:
+
   ```
   systemctl reboot
   ```
+
 - Then rebase to the signed image, like so:
+
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cvsickle/cvos:latest
   ```
+
 - Reboot again to complete the installation
+
   ```
   systemctl reboot
   ```
@@ -41,3 +48,12 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/cvsickle/cvos
 ```
+
+## Repository Mirrors
+
+- Github - [https://github.com/cvsickle/cvos](https://github.com/cvsickle/cvos)
+  - All actions run on GitHub.
+- Codeberg - [https://codeberg.org/cvsickle/cvos](https://codeberg.org/cvsickle/cvos)
+  - Push/Pull mirror.
+- Forgejo - [https://git.cvsickle.com/cvsickle/cvos](https://git.cvsickle.com/cvsickle/cvos)
+  - Pull mirror only.
