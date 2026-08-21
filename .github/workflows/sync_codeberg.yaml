@@ -19,11 +19,11 @@ jobs:
             - name: "Gather facts"
               run: |
                   echo "Repo variables:"
-                  echo "  CODEBURG_PUSH_URL: ${{ vars.CODEBURG_BASE_URL }}${{ vars.CODEBURG_REPO }}.git"
-                  echo "  CODEBURG_USERNAME: ${{ vars.CODEBURG_USERNAME }}"
+                  echo "  CODEBERG_PUSH_URL: ${{ vars.CODEBERG_BASE_URL }}${{ vars.CODEBERG_REPO }}.git"
+                  echo "  CODEBERG_USERNAME: ${{ vars.CODEBERG_USERNAME }}"
             - name: "Sync repo"
               uses: yesolutions/mirror-action@v0.7.0
               with:
-                  REMOTE: "${{ vars.CODEBURG_BASE_URL }}${{ vars.CODEBURG_REPO }}.git"
-                  GIT_USERNAME: ${{ vars.CODEBURG_USERNAME }}
-                  GIT_PASSWORD: ${{ secrets.CODEBURG_TOKEN }}
+                  REMOTE: "${{ vars.CODEBERG_BASE_URL }}${{ vars.CODEBERG_REPO }}.git"
+                  GIT_USERNAME: ${{ vars.CODEBERG_USERNAME }}
+                  GIT_PASSWORD: ${{ secrets.CODEBERG_TOKEN }}
