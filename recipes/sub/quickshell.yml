@@ -14,5 +14,4 @@ modules:
         - qt6-qtimageformats
         - qt6-qtpositioning # weather widgets
         - libqalculate # Quickshell's calculator integration
-        - google-noto-emoji-fonts
-        - papirus-icon-theme
+        - kf6-syntax-highlighting

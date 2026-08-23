@@ -23,7 +23,6 @@ modules:
         - headsetcontrol
         - mediainfo
         - polkit
-        - xfce-polkit
         - fprintd-pam
         - xdg-user-dirs
         - dbus-tools
@@ -34,6 +33,7 @@ modules:
         - playerctl
         - qt5-qtwayland
         - qt6-qtwayland
+        - qt6ct
         - vulkan-validation-layers
         - vulkan-tools
         - google-noto-emoji-fonts
