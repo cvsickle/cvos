@@ -4,7 +4,6 @@ modules:
       copr:
         - atim/starship
         - imput/helium
-        - maveonair/jetbrains-mono-nerd-fonts
     install:
       install-weak-deps: false
       packages:
@@ -22,11 +21,8 @@ modules:
         - xorg-x11-server-Xwayland
         - headsetcontrol
         - mediainfo
-        - polkit
         - fprintd-pam
-        - xdg-user-dirs
         - dbus-tools
-        - dbus-daemon
         - wl-clipboard
         - cliphist
         - pavucontrol
@@ -39,20 +35,17 @@ modules:
         - google-noto-emoji-fonts
         - gnome-disk-utility
         - ddcutil
-        - openssl
         - alsa-firmware
         - distrobox
         - steam-devices
+        - gnome-keyring
 
         # Audio
-        - wireplumber
-        - pipewire
         - pamixer
         - pulseaudio-utils
 
         # Networking
         - network-manager-applet
-        - NetworkManager
         - NetworkManager-openvpn
         - NetworkManager-openvpn-gnome
         - NetworkManager-openconnect
@@ -91,13 +84,10 @@ modules:
         - brightnessctl
         - kanshi
 
-        # notifications
-        - dunst
-
         # GUI
         - fontawesome-fonts-all
-        - jetbrains-mono-nerd-fonts
-        - jetbrains-mononl-nerd-fonts
+        - google-noto-mono-fonts
+        - liberation-mono-fonts
         - gnome-icon-theme
         - paper-icon-theme
         - breeze-icon-theme
@@ -106,3 +96,8 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
