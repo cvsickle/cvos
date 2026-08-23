@@ -1,0 +1,17 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - solopasha/hyprland
+    install:
+      install-weak-deps: true
+      packages:
+        - hyprland
+        - hyprland-qtutils
+        - hyprland-qt-support
+        - hyprpaper
+        - hyprlock
+        - hypridle
+        - hyprcursor
+        - hyprpicker
+        - xdg-desktop-portal-hyprland
