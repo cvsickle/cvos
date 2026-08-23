@@ -39,7 +39,22 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with these [instructions](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+If built on Fedora Atomic, you can generate an offline ISO with:
+
+```bash
+sudo bluebuild generate-iso --variant kinoite recipe recipes/recipe.yml
+```
+
+The `kinoite` installer asks for a user and password before installing. The
+`silverblue` variant creates the account on first boot instead, while the
+`server` variant asks for a user during installation. The ISO installer gets
+network support from Anaconda, not from the image's NetworkManager applets, so
+the target machine must have a supported wired or wireless device available.
+
+See the [BlueBuild ISO instructions](https://blue-build.org/how-to/generate-iso/#_top)
+for more options. These ISOs cannot unfortunately be distributed on GitHub for
+free due to large sizes, so for public projects something else has to be used
+for hosting.
 
 ## Verification
 
