@@ -34,7 +34,9 @@
                 "github.vscode-github-actions",
                 "redhat.vscode-yaml",
                 "nefrob.vscode-just-syntax",
-                "DavidAnson.vscode-markdownlint"
+                "DavidAnson.vscode-markdownlint",
+                "Vivswan.litellm-vscode-chat",
+                "GitHub.copilot-chat"
             ],
             "settings": {
                 "shellcheck.enable": true,
