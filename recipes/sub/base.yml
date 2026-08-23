@@ -11,19 +11,93 @@ modules:
         - kitty
         - micro
         - starship
+        - vim
+        - nano
+        - just
 
         # Environment
+        - fzf
         - power-profiles-daemon
+        - xorg-x11-server-Xwayland
+        - headsetcontrol
+        - mediainfo
+        - fprintd-pam
+        - dbus-tools
+        - wl-clipboard
+        - cliphist
+        - pavucontrol
+        - playerctl
+        - qt5-qtwayland
+        - qt6-qtwayland
+        - qt6ct
+        - vulkan-validation-layers
+        - vulkan-tools
+        - google-noto-emoji-fonts
+        - gnome-disk-utility
+        - ddcutil
+        - alsa-firmware
+        - distrobox
+        - steam-devices
+        - gnome-keyring
 
         # Audio
-        - wireplumber
-        - pipewire
         - pamixer
         - pulseaudio-utils
 
+        # Networking
+        - network-manager-applet
+        - NetworkManager-openvpn
+        - NetworkManager-openvpn-gnome
+        - NetworkManager-openconnect
+        - NetworkManager-openconnect-gnome
+        - bluez
+        - bluez-tools
+        - blueman
+        - firewall-config
+
         # Browser
         - helium-bin
+
+        # file manager
+        - thunar
+        - thunar-archive-plugin
+        - thunar-volman
+        - xarchiver
+        - imv
+        - p7zip
+        - gvfs-mtp
+        - gvfs-gphoto2
+        - gvfs-smb
+        - gvfs-nfs
+        - gvfs-fuse
+        - gvfs-archive
+        - android-tools
+
+        # screenshot
+        - slurp
+        - grim
+        - swappy
+
+        # display
+        - wlr-randr
+        - wlsunset
+        - brightnessctl
+        - kanshi
+
+        # GUI
+        - fontawesome-fonts-all
+        - google-noto-mono-fonts
+        - liberation-mono-fonts
+        - gnome-icon-theme
+        - paper-icon-theme
+        - breeze-icon-theme
+        - papirus-icon-theme
     remove:
       packages:
         - firefox
         - firefox-langpacks
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono

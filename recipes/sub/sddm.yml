@@ -6,11 +6,10 @@ modules:
       packages:
         - sddm
         - sddm-themes
-        - qt5-qtgraphicaleffects
-        - qt5-qtquickcontrols2
-        - qt5-qtsvg
-        - kwallet
-        - pam-kwallet
+        - weston
+        - qt6-qt5compat
+        - qt6-qtquickcontrols2
+        - qt6-qtsvg
 
   - type: script
     scripts:

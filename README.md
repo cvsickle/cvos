@@ -49,6 +49,20 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 cosign verify --key cosign.pub ghcr.io/cvsickle/cvos
 ```
 
+## Local Testing
+
+Verify the recipe syntax using:
+
+```bash
+bluebuild generate -d ./recipes/recipe.yml
+```
+
+Verify the image builds using:
+
+```bash
+bluebuild build ./recipes/recipe.yml
+```
+
 ## Repository Mirrors
 
 - Github - [https://github.com/cvsickle/cvos](https://github.com/cvsickle/cvos)

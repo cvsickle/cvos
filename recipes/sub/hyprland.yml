@@ -1,0 +1,24 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - craftidore/wayblueorg-hyprland
+    install:
+      install-weak-deps: true
+      packages:
+        - hyprland
+        - hyprland-guiutils
+        - hyprland-qt-support
+        - hyprpaper
+        - hyprlock
+        - hypridle
+        - hyprcursor
+        - hyprpicker
+        - hyprutils
+        - hyprpolkitagent
+        - xdg-desktop-portal-hyprland
+
+  - type: systemd
+    user:
+      enabled:
+        - hyprpolkitagent.service

@@ -1,0 +1,17 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - errornointernet/quickshell
+    install:
+      install-weak-deps: true
+      packages:
+        - quickshell
+        - qt6-qtdeclarative
+        - qt6-qt5compat # Qt5Compat.GraphicalEffects — used by nearly every config
+        - qt6-qtmultimedia # media player widgets / MPRIS art
+        - qt6-qtsvg
+        - qt6-qtimageformats
+        - qt6-qtpositioning # weather widgets
+        - libqalculate # Quickshell's calculator integration
+        - kf6-syntax-highlighting
