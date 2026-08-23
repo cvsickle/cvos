@@ -18,6 +18,9 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - from-file: sub/base.yml
+  - from-file: sub/hyprland.yml
+  - from-file: sub/xdg-desktop-portal.yml
+  - from-file: sub/quickshell.yml
   - from-file: sub/sddm.yml
   - from-file: sub/flatpak.yml
 
