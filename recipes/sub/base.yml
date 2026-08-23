@@ -1,0 +1,29 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+        - imput/helium
+    install:
+      install-weak-deps: false
+      packages:
+        # Terminal and shell
+        - kitty
+        - micro
+        - starship
+
+        # Environment
+        - power-profiles-daemon
+
+        # Audio
+        - wireplumber
+        - pipewire
+        - pamixer
+        - pulseaudio-utils
+
+        # Browser
+        - helium-bin
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
