@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+user_shell="${HOME}/.config/quickshell"
+system_shell="/usr/share/cvos/shell"
+
+if [[ -f "${user_shell}/shell.qml" ]]; then
+  exec quickshell -p "${user_shell}"
+fi
+
+exec quickshell -p "${system_shell}"

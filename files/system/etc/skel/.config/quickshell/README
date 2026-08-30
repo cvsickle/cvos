@@ -1,0 +1,2 @@
+Place a shell.qml in this directory to replace the packaged Quickshell bar.
+Until then, cvos-launch-shell starts /usr/share/cvos/shell.

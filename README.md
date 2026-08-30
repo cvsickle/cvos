@@ -4,6 +4,23 @@ This is the start of a custom operating system. Very much a WIP.
 
 Based on the [Bluebuild Template](https://github.com/blue-build/template).
 
+## Desktop defaults
+
+Hyprland and Quickshell ship system defaults under `/usr/share/cvos`. New users get override stubs from `/etc/skel`. Edit files in `~/.config` — do not copy the packaged tree unless you want to replace it.
+
+| Path | Role |
+| --- | --- |
+| `/usr/share/cvos/hypr/` | Packaged Hyprland look, input, binds, autostart, lock/idle/paper |
+| `/usr/share/cvos/shell/` | Packaged Quickshell bar (`shell.qml`) |
+| `/usr/share/cvos/bin/cvos-launch-shell` | Starts the user shell if present, otherwise the packaged one |
+| `/etc/skel/.config/hypr/` | Seeded user Hyprland config |
+| `/etc/skel/.config/quickshell/README` | How to override Quickshell |
+| `/usr/share/wayland-sessions/hyprland.desktop` | SDDM session |
+
+Quickshell: copy `shell.qml` into `~/.config/quickshell/` to replace the bar. Until that file exists, `cvos-launch-shell` runs `/usr/share/cvos/shell`.
+
+Default apps: Kitty, Helium, Thunar. Default binds include Super+Return (terminal), Super+Shift+Return / Super+Shift+B (browser), Super+Shift+F (files), Super+Q / Super+W (close), Super+F (fullscreen), Super+Ctrl+L (lock), Print (grim/slurp/swappy).
+
 ## Installation
 
 > [!WARNING]  
