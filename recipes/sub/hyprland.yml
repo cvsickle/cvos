@@ -18,6 +18,10 @@ modules:
         - hyprpolkitagent
         - xdg-desktop-portal-hyprland
 
+  - type: script
+    scripts:
+      - chmod-cvos-bin.sh
+
   - type: systemd
     user:
       enabled:
