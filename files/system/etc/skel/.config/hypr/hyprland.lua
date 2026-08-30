@@ -1,5 +1,5 @@
--- cvos Hyprland defaults. User configs should source this file, then
--- optionally source local override fragments.
+-- User-local Hyprland config. Keep overrides in ~/.config/hypr and
+-- source the local stub files instead of the packaged defaults.
 
 terminal = "kitty"
 browser = "helium"
@@ -16,8 +16,8 @@ env = {
     MOZ_ENABLE_WAYLAND = "1",
 }
 
-source = "/usr/share/cvos/hypr/looknfeel.lua"
-source = "/usr/share/cvos/hypr/input.lua"
-source = "/usr/share/cvos/hypr/monitors.lua"
-source = "/usr/share/cvos/hypr/autostart.lua"
-source = "/usr/share/cvos/hypr/bindings.lua"
+source = "~/.config/hypr/looknfeel.lua"
+source = "~/.config/hypr/input.lua"
+source = "~/.config/hypr/monitors.lua"
+source = "~/.config/hypr/autostart.lua"
+source = "~/.config/hypr/bindings.lua"
